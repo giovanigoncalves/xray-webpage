@@ -5,9 +5,53 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Plots</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <py-env>
+        - matplotlib
+        - numpy
+        - plotly
+        - pandas
+    </py-env>
+
 </head>
 <body>
-    <p>In contruction...</p>
+
+    <header>
+        <h1>In construction...</h1>
+    </header>
+    <main>
+        
+        <br>
+        <hr>
+        <h1>Image plots</h1>
+        <p>Intends the use of python to plot good graphs from difraction image files</p>
+        
+        <h2>Plot test</h2>
+        <div id="plot"></div>
+        <py-script output="plot">
+        
+            import matplotlib.pyplot as plt
+            import numpy as np
+            def eq(n):
+                return 2**x - 8*x
+        
+            x = np.arange(0, 15, .1)
+            fig, ax = plt.subplots()
+            ax.plot(x, eq(x), label='test')
+        
+            ax.set_xlabel("x values")
+            ax.set_ylabel("y_values")
+            ax.set_title("Py-Script plot test")
+            ax.legend()
+            ax.grid(ls=":", c="gray")
+            fig
+        
+        </py-script>
+    </main>
+
     <a href="index.html">..Back</a>
 </body>
 </html>
